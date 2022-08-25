@@ -1,0 +1,705 @@
+/* **********     Reset CSS     ********** */
+:root {
+   --main-font: sans-serif;
+   --font-size: 16px;
+   --main-color: #77a4a6;
+   --second-color: #222;
+   --main-modal-color: rgb(118, 200, 203);
+   --second-modal-color: rgba(34, 34, 34, 0.85);
+   --container-width: 1200px;
+}
+
+html {
+   box-sizing: border-box;
+   font-family: var(--main-font);
+   font-size: var(--font-size);
+   scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+}
+
+body {
+   margin: 0;
+   overflow-x: hidden;
+}
+
+img,
+video {
+   max-width: 100%;
+   height: auto;
+}
+
+.header {
+   position: fixed;
+   width: 100%;
+   min-width: max-content;
+   height: 5rem;
+   z-index: 850;
+   top: 0;
+   padding: 1rem;
+   background-color: var(--main-color);
+   color: var(--second-color);
+}
+
+.header h1 {
+   margin: 0 auto;
+   text-align: center;
+}
+
+.section {
+   padding: 5rem 2rem 0;
+   /* padding-top: 5rem; */
+   margin: 0 auto;
+   width: 100%;
+   max-width: var(--container-width);
+   min-height: 100vh;
+   text-align: center;
+}
+
+.section h2 {
+   margin-bottom: 2rem;
+}
+
+/* **********     menu-hamburguesa     ********** */
+
+.panel-btn {
+   position: fixed;
+   z-index: 999;
+   bottom: 1vh;
+   right: 1vw;
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--main-color);
+}
+
+.panel-btn:hover {
+   opacity: 0.8;
+}
+
+.panel {
+   position: fixed;
+   z-index: 900;
+   background-color: var(--second-modal-color);
+   width: 100%;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   overflow-y: auto;
+   transform: translate(-100%, 0);
+   transition: all 0.3s ease;
+}
+
+.panel.is-active {
+   transform: translate(0, 0);
+}
+
+.menu {
+   position: absolute;
+   top: 0px;
+   width: inherit;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   opacity: 0.8;
+}
+
+.menu a {
+   padding: 2rem;
+   width: inherit;
+   display: block;
+   font-size: 1.5rem;
+   text-decoration: none;
+   color: var(--main-modal-color);
+   transition: all 0.3s ease;
+}
+
+.menu a:hover {
+   font-weight: bold;
+   color: var(--second-color);
+   background-color: var(--main-modal-color);
+}
+
+/* **********     Reloj     ********** */
+
+.reloj__btns {
+   display: inline-block;
+   min-width: max-content;
+   margin-bottom: 2rem;
+}
+
+/* **********     Eventos del Teclado     ********** */
+
+.stage {
+   display: flex;
+   min-height: 50vh;
+   background-color: var(--second-color);
+   margin-bottom: 1rem;
+}
+
+.stage:hover {
+   cursor: pointer;
+}
+
+.stage-active {
+   outline: 8px solid var(--main-color);
+}
+
+.ball {
+   margin: auto;
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   background-color: var(--main-color);
+}
+
+/* **********     Cuenta Regresiva     ********** */
+
+.countdown p {
+   font-size: calc(1.5rem + 1.5vw);
+}
+
+@media screen and (min-width: 1024px) {
+   .countdown p {
+      font-size: 2.5rem;
+   }
+}
+
+.countdown b {
+   color: goldenrod;
+}
+
+.countdown span {
+   display: inline-block;
+}
+
+.form-cuenta {
+   padding: 10px;
+   margin-top: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.form-cuenta button {
+   min-width: max-content;
+}
+
+.form-cuenta input {
+   max-width: 300px;
+   min-width: 200px;
+}
+
+.form-cuenta * {
+   margin: 1rem;
+}
+
+.text-fecha p {
+   font-size: 1.4rem;
+}
+
+.btn-success:focus {
+   box-shadow: none;
+}
+
+.btn-danger:focus {
+   box-shadow: none;
+}
+
+.borrar-fecha {
+   opacity: 1;
+   visibility: visible;
+   transition: all 0.4s ease;
+}
+
+.button-inactive {
+   opacity: 0;
+   visibility: hidden;
+}
+
+/* **********     ScrollTopButton     ********** */
+
+.scroll-top-btn {
+   position: fixed;
+   z-index: 700;
+   bottom: 1vh;
+   right: calc(4.25rem + 1vw);
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   font-size: 2rem;
+   font-weight: 900;
+   line-height: 4rem;
+   background-color: var(--main-color);
+   color: var(--second-color);
+   cursor: pointer;
+   outline: 0;
+   border: 0;
+   transition: all 0.3s ease-out;
+}
+
+.scroll-top-btn:hover {
+   background-color: var(--second-color);
+   color: var(--main-color);
+}
+
+.hidden {
+   visibility: hidden;
+   opacity: 0;
+}
+
+/* **********     DarkThemeButton     ********** */
+
+.dark-theme-btn {
+   position: fixed;
+   z-index: 700;
+   bottom: 1vh;
+   left: 1vw;
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   font-size: 2rem;
+   text-align: center;
+   font-weight: bold;
+   background-color: var(--main-color);
+   color: var(--second-color);
+   cursor: pointer;
+   outline: 0;
+   border: 0;
+   transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover {
+   background-color: var(--second-color);
+   color: var(--main-color);
+}
+
+.dark-mode {
+   background-color: #333;
+   color: var(--main-color);
+}
+
+/* **********     Responsible Responsive Design     ********** */
+#seccion4 div {
+   padding: 10px 0;
+   margin: 20px 0;
+   border: solid 3px var(--second-color);
+   border-radius: 10px;
+   background-color: lightgray;
+}
+
+/* **********     Responsive Tester      ********** */
+
+.form-responsive-tester {
+   max-width: 500px;
+   padding: 3rem;
+   margin: auto;
+   border: 2px solid var(--second-color);
+   border-radius: 15px;
+}
+
+.form-responsive-tester .form-control {
+   margin-bottom: 0.5rem;
+}
+
+.form-responsive-tester .btn {
+   margin-top: 1rem;
+}
+
+/* **********     User Agent      ********** */
+
+ul li {
+   font-size: 1.2rem;
+   margin: 2rem 0;
+}
+
+ul img {
+   width: 40px;
+}
+
+/* **********     Network Status     ********** */
+
+.online,
+.offline {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+   padding: 1rem;
+   font-size: 1.5rem;
+   font-weight: bold;
+   text-align: center;
+   background-color: #1b5e20;
+   color: #fff;
+}
+
+.offline {
+   background-color: #b71c1c;
+}
+
+/* **********     Webcam     ********** */
+#seccion7 .btn {
+   margin-bottom: 1rem;
+}
+
+.btn-cerrar {
+   display: none;
+}
+
+.btn-active {
+   display: inline-block;
+}
+
+mark {
+   background-color: yellow;
+}
+
+/* **********     Geolocation     ********** */
+
+#seccion8 .btn {
+   margin-bottom: 1rem;
+}
+
+/* **********     SearchFilters     ********** */
+
+.card-filter {
+   max-width: 400px;
+}
+
+#seccion9 .fa-magnifying-glass {
+   font-size: 1.5rem;
+   margin-right: 1rem;
+}
+
+#seccion9 .input-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.card-filter::-webkit-search-cancel-button {
+   display: none;
+}
+.cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+   margin: 15px;
+   background-color: var(--second-color);
+   color: var(--main-color);
+   transition: all 0.3s ease-out;
+}
+
+.card img {
+   width: 100%;
+   height: auto;
+}
+
+.card figcaption {
+   padding: 1rem;
+}
+
+.filter {
+   visibility: hidden;
+   opacity: 0;
+   order: 1;
+}
+
+/* **********     Responsive Sliders     ********** */
+
+#seccion11 {
+   padding: 5rem 0 0;
+}
+
+.slider-container {
+   position: relative;
+   z-index: 700;
+   width: 90vw;
+   height: 67.5vw;
+   max-width: 640px;
+   max-height: 480px;
+   margin: 1rem auto 0;
+   overflow: hidden;
+}
+
+.slides {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+.slide {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 1s ease;
+}
+
+.slide.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.slider-btn {
+   position: absolute;
+   z-index: 800;
+   width: 3rem;
+   height: 3rem;
+   border: 3px solid var(--main-color);
+   color: var(--main-color);
+   background-color: transparent;
+   border-radius: 50%;
+   font-size: 1.5rem;
+}
+
+.slider-btn:hover {
+   border: 3px solid #222;
+   color: #222;
+}
+
+.slider-btn.btn-prev {
+   left: 5px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.slider-btn.btn-next {
+   right: 5px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+/* Classic-Slider */
+.classic-slides {
+   position: relative;
+   display: flex;
+   width: 400%;
+   margin-left: -100%;
+}
+
+.classic-slide {
+   width: 100%;
+   height: 100%;
+}
+
+.classic-slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.classic-slider-btn-prev,
+.classic-slider-btn-next {
+   position: absolute;
+   z-index: 800;
+   width: 3rem;
+   height: 3rem;
+   border: 3px solid var(--main-color);
+   color: var(--main-color);
+   background-color: transparent;
+   border-radius: 50%;
+   font-size: 1.5rem;
+}
+
+.classic-slider-btn-prev:hover,
+.classic-slider-btn-next:hover {
+   border: 3px solid #222;
+   color: #222;
+}
+
+.classic-slider-btn-prev {
+   left: 5px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.classic-slider-btn-next {
+   right: 5px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+/* **********     ScrollSpy     ********** */
+
+@media screen and (min-width: 1200px) {
+   body {
+      position: relative;
+      display: grid;
+      grid-template-columns: 80% 20%;
+      grid-template-rows: 5rem auto;
+      grid-template-areas:
+         'header header'
+         'main panel';
+   }
+
+   main {
+      grid-area: main;
+   }
+
+   .header {
+      grid-area: header;
+   }
+
+   .div-aside {
+      grid-area: panel;
+   }
+
+   .panel {
+      width: 100%;
+      height: calc(100vh - 5rem);
+      position: sticky;
+      top: 5rem;
+      overflow-y: auto;
+      background-color: var(--second-color);
+      transform: translate(0, 0);
+      z-index: 800;
+      justify-content: flex-start;
+   }
+
+   .panel-btn {
+      display: none;
+   }
+
+   .menu {
+      position: relative;
+      width: 100%;
+      opacity: 1;
+      text-align: right;
+   }
+
+   .menu a {
+      font-size: 1.1rem;
+      padding: 0.75rem;
+   }
+
+   .menu a.active {
+      color: var(--second-color);
+      background-color: var(--main-modal-color);
+   }
+
+   .scroll-top-btn {
+      right: initial;
+      left: calc(4.25rem + 1vw);
+   }
+}
+
+/* **********     ContactForm Validations     ********** */
+
+.contact-form {
+   --form-ok-color: #4caf50;
+   --form-error-color: #f44336;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 800px;
+}
+
+.contact-form > * {
+   padding: 0.5rem;
+   margin: 1rem auto;
+   display: block;
+   width: 100%;
+}
+
+.contact-form textarea {
+   resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+   font-size: 1.5rem;
+   font-weight: bold;
+   text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+   font-size: 1rem;
+   font-family: sans-serif;
+   border: thin solid black;
+   border-radius: 5px;
+}
+
+.contact-form img {
+   width: 50px;
+}
+
+.contact-form input[type='submit'] {
+   width: 50%;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.contact-form *::placeholder {
+   color: #000;
+}
+
+.contact-form [required]:valid {
+   border: thin solid var(--form-ok-color);
+}
+
+.contact-form .invalid {
+   border: thin solid var(--form-error-color);
+}
+
+.contact-form-error {
+   margin-top: -1rem;
+   font-size: 90%;
+   background-color: var(--form-error-color);
+   color: #fff;
+   border-radius: 5px;
+   transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+   display: block;
+   animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+@keyframes show-message {
+   0% {
+      visibility: hidden;
+      opacity: 0;
+   }
+
+   100% {
+      visibility: visible;
+      opacity: 1;
+   }
+}
+
+.none {
+   display: none;
+}
+
+/* **********     Speaker     ********** */
+
+.speaker {
+   max-width: 800px;
+   margin: auto;
+}

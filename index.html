@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Manipulación del DOM</title>
+      <link rel="stylesheet" href="./normalize.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
+      />
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+         crossorigin="anonymous"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body data-dark>
+      <header class="header">
+         <h1>Manipulación del DOM</h1>
+      </header>
+      <button class="panel-btn hamburger hamburger--3dx" type="button">
+         <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+         </span>
+      </button>
+      <div class="div-aside">
+         <aside class="panel">
+            <nav class="menu">
+               <a href="#seccion1" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
+               <a href="#seccion2" data-scroll-spy>Eventos del Teclado</a>
+               <a href="#seccion3" data-scroll-spy>Cuenta Regresiva</a>
+               <a href="#seccion4" data-scroll-spy>Responsive con JavaScript</a>
+               <a href="#seccion5" data-scroll-spy>Responsive Tester</a>
+               <a href="#seccion6" data-scroll-spy>Detección de Dispositivos (User Agent)</a>
+               <a href="#seccion7" data-scroll-spy>Detección de la cámara web</a>
+               <a href="#seccion8" data-scroll-spy>Geolocalización</a>
+               <a href="#seccion9" data-scroll-spy>Filtros de Búsquedas</a>
+               <a href="#seccion10" data-scroll-spy>Sorteo Digital</a>
+               <a href="#seccion11" data-scroll-spy>Responsive Sliders</a>
+               <a href="#seccion12" data-scroll-spy>Video Inteligente</a>
+               <a href="#seccion13" data-scroll-spy>Validaciones de Formulario</a>
+               <a href="#seccion14" data-scroll-spy>Narrador</a>
+            </nav>
+         </aside>
+      </div>
+
+      <main>
+         <section id="seccion1" class="section" data-scroll-spy>
+            <h2>Reloj Digital y Alarma Sonora</h2>
+            <div id="reloj"></div>
+            <div class="flex-row-center">
+               <div class="reloj__btns">
+                  <button id="activar-reloj">Iniciar Reloj</button>
+                  <button id="desactivar-reloj">Detener Reloj</button>
+               </div>
+               <div class="reloj__btns">
+                  <button id="activar-alarma">Iniciar Alarma</button>
+                  <button id="desactivar-alarma">Detener Alarma</button>
+               </div>
+            </div>
+         </section>
+
+         <section id="seccion2" class="section" data-scroll-spy>
+            <h2>Eventos del Teclado</h2>
+            <article class="stage">
+               <div class="ball"></div>
+            </article>
+            <p>Seleccioná el panel y mové el círculo con las teclas: (↑ → ↓ ←) o (WASD)</p>
+         </section>
+
+         <section id="seccion3" class="section" data-scroll-spy>
+            <h2>Cuenta Regresiva</h2>
+            <form id="cuenta-regres" class="form-cuenta">
+               <label for="fecha">Ingrese una fecha (ej: Aug 9, 2022) </label>
+               <input type="text" name="fecha" class="form-control" placeholder="Mmm dd, aaaa" />
+               <button type="submit" class="btn btn-success iniciar-cuenta">Iniciar Cuenta</button>
+            </form>
+            <div class="countdown"></div>
+            <div class="text-fecha"></div>
+            <button type="button" class="btn btn-danger borrar-fecha button-inactive">
+               Borrar fecha seteada
+            </button>
+         </section>
+
+         <section id="seccion4" class="section" data-scroll-spy>
+            <h2>Responsive con JavaScript</h2>
+            <h3>Museo Castagnino</h3>
+            <div id="youtube"></div>
+            <div id="gmaps"></div>
+         </section>
+
+         <section id="seccion5" class="section" data-scroll-spy>
+            <h2>Responsive Tester</h2>
+            <form id="responsive-tester" class="form-responsive-tester">
+               <input
+                  name="direccion"
+                  type="url"
+                  class="form-control"
+                  placeholder="URL"
+                  data-dark
+                  required
+               />
+               <input
+                  name="ancho"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ancho"
+                  data-dark
+                  required
+               />
+               <input
+                  name="alto"
+                  type="text"
+                  class="form-control"
+                  placeholder="Alto"
+                  data-dark
+                  required
+               />
+               <input name="probar" type="submit" class="btn btn-success" value="Probar" />
+               <input name="cerrar" type="button" class="btn btn-danger" value="Cerrar" />
+            </form>
+         </section>
+
+         <section id="seccion6" class="section" data-scroll-spy>
+            <h2>Detección de Dispositivos<br />(User Agent)</h2>
+            <div id="user-device"></div>
+         </section>
+
+         <section id="seccion7" class="section" data-scroll-spy>
+            <h2>Detección de la cámara web</h2>
+            <div>
+               <button id="iniciar-webcam" class="btn btn-success">Abrir Cámara</button>
+               <button id="cerrar-webcam" class="btn btn-danger btn-cerrar">Cerrar Cámara</button>
+            </div>
+            <video id="webcam"></video>
+         </section>
+
+         <section id="seccion8" class="section" data-scroll-spy>
+            <h2>Geolocalización</h2>
+            <button type="button" class="btn btn-success">Obtener ubicación</button>
+            <div id="geolocation"></div>
+         </section>
+
+         <section id="seccion9" class="section" data-scroll-spy data-scroll-spy>
+            <h2>Filtros de Búsquedas</h2>
+            <div class="input-container">
+               <i class="fa-solid fa-magnifying-glass"></i>
+               <input
+                  type="search"
+                  placeholder="Buscar..."
+                  class="card-filter form-control"
+                  data-dark
+               />
+            </div>
+            <article class="cards">
+               <figure class="card">
+                  <img src="https://placeimg.com/200/200/nature" alt="Nature" />
+                  <figcaption>Nature</figcaption>
+               </figure>
+               <figure class="card">
+                  <img src="https://placeimg.com/200/200/any" alt="Any" />
+                  <figcaption>Any</figcaption>
+               </figure>
+               <figure class="card">
+                  <img src="https://placeimg.com/200/200/tech" alt="Tech" />
+                  <figcaption>Tech</figcaption>
+               </figure>
+               <figure class="card">
+                  <img src="https://placeimg.com/200/200/animals" alt="Animals" />
+                  <figcaption>Animals</figcaption>
+               </figure>
+               <figure class="card">
+                  <img src="https://placeimg.com/200/200/people" alt="People" />
+                  <figcaption>People</figcaption>
+               </figure>
+               <figure class="card">
+                  <img src="https://placeimg.com/200/200/arch" alt="Architecture" />
+                  <figcaption>Architecture</figcaption>
+               </figure>
+            </article>
+         </section>
+
+         <section id="seccion10" class="section" data-scroll-spy data-scroll-spy>
+            <h2>Sorteo Digital</h2>
+            <ul class="players">
+               <li class="player">JavaScript</li>
+               <li class="player">PHP</li>
+               <li class="player">JAVA</li>
+               <li class="player">C</li>
+               <li class="player">Python</li>
+               <li class="player">Ruby</li>
+               <li class="player">Go</li>
+               <li class="player">Visual Basic</li>
+               <li class="player">Rust</li>
+               <li class="player">Perl</li>
+            </ul>
+            <button id="winner-btn" class="btn btn-success">Obtener Ganador</button>
+         </section>
+
+         <section id="seccion11" class="section" data-scroll-spy>
+            <h2>Responsive Sliders</h2>
+            <article class="slider-container">
+               <button class="slider-btn btn-prev"><i class="fa-solid fa-arrow-left"></i></button>
+               <button class="slider-btn btn-next"><i class="fa-solid fa-arrow-right"></i></button>
+               <div class="slides">
+                  <div class="slide active"><img src="https://placeimg.com/640/480/tech" /></div>
+                  <div class="slide"><img src="https://placeimg.com/640/480/people" /></div>
+                  <div class="slide"><img src="https://placeimg.com/640/480/nature" /></div>
+                  <div class="slide"><img src="https://placeimg.com/640/480/arch" /></div>
+               </div>
+            </article>
+            <br />
+            <article class="slider-container">
+               <button class="classic-slider-btn-prev" data-pb>
+                  <i class="fa-solid fa-arrow-left" data-pb></i>
+               </button>
+               <button class="classic-slider-btn-next" data-nb>
+                  <i class="fa-solid fa-arrow-right" data-nb></i>
+               </button>
+               <div class="classic-slides">
+                  <div class="classic-slide">
+                     <img src="https://placeimg.com/640/480/animals/grayscale" />
+                  </div>
+                  <div class="classic-slide">
+                     <img src="https://placeimg.com/640/480/arch/grayscale" />
+                  </div>
+                  <div class="classic-slide">
+                     <img src="https://placeimg.com/640/480/nature/grayscale" />
+                  </div>
+                  <div class="classic-slide">
+                     <img src="https://placeimg.com/640/480/people/grayscale" />
+                  </div>
+               </div>
+            </article>
+            <br />
+         </section>
+
+         <section id="seccion12" class="section" data-scroll-spy>
+            <h2>Video Inteligente</h2>
+            <video src="./assets/Motociclista.mp4" muted controls loop data-smart-video></video>
+         </section>
+
+         <section id="seccion13" class="section" data-scroll-spy>
+            <h2>Validaciones de Formulario</h2>
+            <form id="contact-form" class="contact-form">
+               <legend>Envianos tu comentario</legend>
+               <input
+                  class="nameInput"
+                  type="text"
+                  name="name"
+                  placeholder="Escribe tu nombre"
+                  title="El nombre es requerido y sólo acepta letras y espacios en blanco"
+                  pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                  required
+               />
+               <input
+                  type="email"
+                  name="email"
+                  placeholder="Escribe tu email"
+                  title="Email incorrecto"
+                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                  required
+               />
+               <input
+                  type="text"
+                  name="subject"
+                  placeholder="Asunto a tratar"
+                  title="El asunto es requerido"
+                  required
+               />
+               <textarea
+                  name="comments"
+                  rows="5"
+                  placeholder="Escribe tu comentario"
+                  title="El comentario es requerido y no debe exceder los 255 caracteres"
+                  data-pattern="^.{1,255}$"
+                  required
+               ></textarea>
+               <input type="submit" value="Enviar" />
+            </form>
+         </section>
+
+         <section id="seccion14" class="section" data-scroll-spy>
+            <h2>Narrador</h2>
+            <form class="speaker">
+               <select id="speech-select" class="form-select">
+                  <option value="">--- Elige una Voz ---</option>
+               </select>
+               <br />
+               <textarea
+                  id="speech-text"
+                  placeholder="Ingresa texto para leerlo..."
+                  cols="60"
+                  rows="5"
+                  class="form-control"
+               ></textarea>
+               <br /><br />
+               <button id="speech-btn" class="btn btn-success">Leer Texto</button>
+               <button id="speech-cancel" class="btn btn-danger">Cancelar</button>
+            </form>
+         </section>
+      </main>
+
+      <button class="scroll-top-btn hidden">🠅</button>
+      <button class="dark-theme-btn"><i class="fa-solid fa-moon"></i></button>
+
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+         integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      ></script>
+      <script src="./main.js" type="module"></script>
+   </body>
+</html>
