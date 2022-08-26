@@ -25,12 +25,14 @@ export function speechReader() {
 
    document.addEventListener('click', (e) => {
       if (e.target === $speechBtn) {
+         e.preventDefault();
          if ($speechTextarea.value === '') return;
          speechMessage.text = $speechTextarea.value;
          speechSynthesis.speak(speechMessage);
       }
 
       if (e.target.matches('#speech-cancel')) {
+         e.preventDefault();
          speechSynthesis.cancel();
       }
    });
