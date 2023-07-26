@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Manipulación del DOM</title>
-      <link rel="stylesheet" href="./normalize.css" />
+      <link rel="stylesheet" href="../src/styles/normalize.css" />
       <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
@@ -22,19 +22,22 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
       />
-      <link rel="stylesheet" href="./style.css" />
+      <link rel="stylesheet" href="../src/styles/style.css" />
    </head>
+
    <body data-dark>
       <header class="header">
          <h1>Manipulación del DOM</h1>
       </header>
+
       <button class="panel-btn hamburger hamburger--3dx" type="button">
          <span class="hamburger-box">
             <span class="hamburger-inner"></span>
          </span>
       </button>
-      <div class="div-aside">
-         <aside class="panel">
+
+      <aside class="div-aside">
+         <div class="panel">
             <nav class="menu">
                <a href="#seccion1" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
                <a href="#seccion2" data-scroll-spy>Eventos del Teclado</a>
@@ -51,8 +54,8 @@
                <a href="#seccion13" data-scroll-spy>Validaciones de Formulario</a>
                <a href="#seccion14" data-scroll-spy>Narrador</a>
             </nav>
-         </aside>
-      </div>
+         </div>
+      </aside>
 
       <main>
          <section id="seccion1" class="section" data-scroll-spy>
@@ -81,8 +84,8 @@
          <section id="seccion3" class="section" data-scroll-spy>
             <h2>Cuenta Regresiva</h2>
             <form id="cuenta-regres" class="form-cuenta">
-               <label for="fecha">Ingrese una fecha (ej: Aug 9, 2022) </label>
-               <input type="text" name="fecha" class="form-control" placeholder="Mmm dd, aaaa" />
+               <label for="fecha">Ingresá una fecha (ej: Aug 9, 2022) </label>
+               <input type="text" name="fecha" class="form-control" placeholder="mmm dd, aaaa" />
                <button type="submit" class="btn btn-success iniciar-cuenta">Iniciar Cuenta</button>
             </form>
             <div class="countdown"></div>
@@ -102,30 +105,9 @@
          <section id="seccion5" class="section" data-scroll-spy>
             <h2>Responsive Tester</h2>
             <form id="responsive-tester" class="form-responsive-tester">
-               <input
-                  name="direccion"
-                  type="url"
-                  class="form-control"
-                  placeholder="URL"
-                  data-dark
-                  required
-               />
-               <input
-                  name="ancho"
-                  type="text"
-                  class="form-control"
-                  placeholder="Ancho"
-                  data-dark
-                  required
-               />
-               <input
-                  name="alto"
-                  type="text"
-                  class="form-control"
-                  placeholder="Alto"
-                  data-dark
-                  required
-               />
+               <input name="direccion" type="url" class="form-control" placeholder="URL" data-dark required />
+               <input name="ancho" type="text" class="form-control" placeholder="Ancho" data-dark required />
+               <input name="alto" type="text" class="form-control" placeholder="Alto" data-dark required />
                <input name="probar" type="submit" class="btn btn-success" value="Probar" />
                <input name="cerrar" type="button" class="btn btn-danger" value="Cerrar" />
             </form>
@@ -155,12 +137,7 @@
             <h2>Filtros de Búsquedas</h2>
             <div class="input-container">
                <i class="fa-solid fa-magnifying-glass"></i>
-               <input
-                  type="search"
-                  placeholder="Buscar..."
-                  class="card-filter form-control"
-                  data-dark
-               />
+               <input type="search" placeholder="Buscar..." class="card-filter form-control" data-dark />
             </div>
             <article class="cards">
                <figure class="card">
@@ -325,6 +302,6 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
       ></script>
-      <script src="./main.js" type="module"></script>
+      <script src="../src/main.js" type="module"></script>
    </body>
 </html>

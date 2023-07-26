@@ -8,8 +8,8 @@ export function cuentaRegresiva() {
    let dias, horas, minutos, segundos;
 
    if (!localStorage.getItem('fecha')) {
-      fecha = new Date('Jan 1, 2023').getTime();
-      mensaje = '2023';
+      fecha = new Date('Jan 1, 2024').getTime();
+      mensaje = '2024';
       $borrarFechaBtn.classList.add('button-inactive');
    } else {
       fecha = new Date(localStorage.getItem('fecha')).getTime();
