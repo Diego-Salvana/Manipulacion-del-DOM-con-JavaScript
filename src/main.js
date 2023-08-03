@@ -17,7 +17,7 @@ import { scrollSpy } from './js/scroll_spy.js';
 import { lottery } from './js/sorteo_digital.js';
 import { moveBall, shortcuts } from './js/teclado.js';
 import { darkTheme } from './js/tema_oscuro.js';
-import { smartVideo } from './js/video_inteligente.js';
+import { smartVideo } from './js/video_automatico.js';
 
 const $stage = document.querySelector('.stage'),
    $formTester = document.getElementById('responsive-tester');

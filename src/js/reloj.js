@@ -27,7 +27,7 @@ export function alarma() {
       $iniciarAlarmaBtn = document.querySelector('#activar-alarma'),
       $detenerAlarmaBtn = document.querySelector('#desactivar-alarma');
 
-   $alarma.src = './assets/despierta.mp3';
+   $alarma.src = './assets/alarma.mp3';
 
    let alarmaSet;
    $iniciarAlarmaBtn.addEventListener('click', () => {

@@ -2,9 +2,9 @@ export function classicSlider() {
    const $slidesListContainer = document.querySelector('.classic-slides'),
       $prevBtnAndIcon = document.querySelectorAll('.slider-container [data-pb]'),
       $nextBtnAndIcon = document.querySelectorAll('.slider-container [data-nb]'),
-      widthContainer = document.querySelectorAll('.classic-slide').length * 100;
+      slidesListLength = document.querySelectorAll('.classic-slide').length;
 
-   $slidesListContainer.style.width = `${widthContainer}%`;
+   $slidesListContainer.style.width = `${slidesListLength * 100}%`;
 
    function next() {
       const $firstSlide = document.querySelectorAll('.classic-slide')[0];
@@ -21,10 +21,8 @@ export function classicSlider() {
    }
 
    function prev() {
-      const $lastSlide =
-         document.querySelectorAll('.classic-slide')[
-            document.querySelectorAll('.classic-slide').length - 1
-         ];
+      const $slidesList = document.querySelectorAll('.classic-slide');
+      const $lastSlide = $slidesList[$slidesList.length - 1];
 
       $prevBtnAndIcon.forEach((el) => (el.style.pointerEvents = 'none'));
       $slidesListContainer.style.transition = 'all .5s linear';
@@ -38,23 +36,17 @@ export function classicSlider() {
    }
 
    let interval;
-   const playInterval = () => (interval = setInterval(() => next(), 8000));
+   const playInterval = () => (interval = setInterval(() => next(), 6000));
    playInterval();
 
    document.addEventListener('click', (e) => {
-      if (
-         e.target.matches('.classic-slider-btn-next') ||
-         e.target.matches(`.classic-slider-btn-next *`)
-      ) {
+      if (e.target.matches('.classic-slider-btn-next') || e.target.matches(`.classic-slider-btn-next *`)) {
          clearInterval(interval);
          next();
          playInterval();
       }
 
-      if (
-         e.target.matches('.classic-slider-btn-prev') ||
-         e.target.matches(`.classic-slider-btn-prev *`)
-      ) {
+      if (e.target.matches('.classic-slider-btn-prev') || e.target.matches(`.classic-slider-btn-prev *`)) {
          clearInterval(interval);
          prev();
          playInterval();

@@ -18,7 +18,7 @@ export function fadeSlider() {
    }
 
    let interval;
-   const playInterval = () => (interval = setInterval(() => netx(), 8000));
+   const playInterval = () => (interval = setInterval(() => netx(), 6000));
    playInterval();
 
    document.addEventListener('click', (e) => {
