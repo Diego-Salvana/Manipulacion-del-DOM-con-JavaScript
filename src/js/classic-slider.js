@@ -1,8 +1,8 @@
 export function classicSlider() {
-   const $slidesListContainer = document.querySelector('.classic-slides'),
-      $prevBtnAndIcon = document.querySelectorAll('.slider-container [data-pb]'),
-      $nextBtnAndIcon = document.querySelectorAll('.slider-container [data-nb]'),
-      slidesListLength = document.querySelectorAll('.classic-slide').length;
+   const $slidesListContainer = document.querySelector('.classic-slides');
+   const $prevBtnAndIcon = document.querySelectorAll('.slider-container [data-pb]');
+   const $nextBtnAndIcon = document.querySelectorAll('.slider-container [data-nb]');
+   const slidesListLength = document.querySelectorAll('.classic-slide').length;
 
    $slidesListContainer.style.width = `${slidesListLength * 100}%`;
 

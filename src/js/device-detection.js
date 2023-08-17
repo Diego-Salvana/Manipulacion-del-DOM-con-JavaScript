@@ -1,12 +1,15 @@
-const $userDivice = document.getElementById('user-device'),
-   uAgent = navigator.userAgent;
+const $userDivice = document.getElementById('user-device');
+const uAgent = navigator.userAgent;
 
 export function userDeviceInfo() {
+   const agentData = navigator.userAgentData;
    let browserName = '';
    let img = '';
 
-   if (navigator.userAgentData.brands[1]) browserName = navigator.userAgentData.brands[1].brand;
-   if (browserName === 'Chromium') browserName = 'Google Chrome';
+   if (agentData.brands.length > 0) {
+      if (agentData.brands[1].brand.match(/microsoft edge/i)) browserName = 'Microsoft Edge';
+      else browserName = agentData.brands[2].brand;
+   }
 
    const browser = {
       chrome: () => browserName.match(/google chrome/i),
@@ -48,20 +51,20 @@ export function userDeviceInfo() {
    }
 
    const isMobile = {
-         android: () => uAgent.match(/android/i),
-         ios: () => uAgent.match(/iphone|ipad|ipod/i),
-         check: function () {
-            return this.android() || this.ios();
-         },
+      android: () => uAgent.match(/android/i),
+      ios: () => uAgent.match(/iphone|ipad|ipod/i),
+      check: function () {
+         return this.android() || this.ios();
       },
-      isDesktop = {
-         linux: () => uAgent.match(/linux/i),
-         windows: () => uAgent.match(/windows nt/i),
-         mac: () => uAgent.match(/mac os/i),
-         check: function () {
-            return this.linux() || this.windows() || this.mac();
-         },
-      };
+   };
+   const isDesktop = {
+      linux: () => uAgent.match(/linux/i),
+      windows: () => uAgent.match(/windows nt/i),
+      mac: () => uAgent.match(/mac os/i),
+      check: function () {
+         return this.linux() || this.windows() || this.mac();
+      },
+   };
 
    $userDivice.innerHTML = `<ul>
       <li>User Agent: <b>${navigator.userAgent}</b></li>

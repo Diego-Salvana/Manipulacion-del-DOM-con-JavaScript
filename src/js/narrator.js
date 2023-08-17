@@ -1,8 +1,8 @@
 export function speechReader() {
-   const $speechSelect = document.getElementById('speech-select'),
-      $speechTextarea = document.getElementById('speech-text'),
-      $speechBtn = document.getElementById('speech-btn'),
-      speechMessage = new SpeechSynthesisUtterance();
+   const $speechSelect = document.getElementById('speech-select');
+   const $speechTextarea = document.getElementById('speech-text');
+   const $speechBtn = document.getElementById('speech-btn');
+   const speechMessage = new SpeechSynthesisUtterance();
 
    let voices = [];
    document.addEventListener('DOMContentLoaded', () => {

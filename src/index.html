@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Manipulación del DOM</title>
+      <title>APIs del Navegador</title>
       <link rel="stylesheet" href="./styles/normalize.css" />
       <link
          rel="stylesheet"
@@ -27,8 +27,9 @@
 
    <body data-dark>
       <header class="header">
-         <h1>Manipulación del DOM</h1>
+         <h1>APIs del Navegador</h1>
       </header>
+      section
 
       <button class="panel-btn hamburger hamburger--3dx" type="button">
          <span class="hamburger-box">
@@ -39,41 +40,41 @@
       <aside class="div-aside">
          <div class="panel">
             <nav class="menu">
-               <a href="#seccion1" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
-               <a href="#seccion2" data-scroll-spy>Eventos del Teclado</a>
-               <a href="#seccion3" data-scroll-spy>Cuenta Regresiva</a>
-               <a href="#seccion4" data-scroll-spy>Responsive con JavaScript</a>
-               <a href="#seccion5" data-scroll-spy>Responsive Tester</a>
-               <a href="#seccion6" data-scroll-spy>Detección de Dispositivos (User Agent)</a>
-               <a href="#seccion7" data-scroll-spy>Detección de la cámara web</a>
-               <a href="#seccion8" data-scroll-spy>Geolocalización</a>
-               <a href="#seccion9" data-scroll-spy>Filtros de Búsquedas</a>
-               <a href="#seccion10" data-scroll-spy>Sorteo Digital</a>
-               <a href="#seccion11" data-scroll-spy>Responsive Sliders</a>
-               <a href="#seccion12" data-scroll-spy>Video Automático</a>
-               <a href="#seccion13" data-scroll-spy>Validaciones de Formulario</a>
-               <a href="#seccion14" data-scroll-spy>Narrador</a>
+               <a href="#section1" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
+               <a href="#section2" data-scroll-spy>Eventos del Teclado</a>
+               <a href="#section3" data-scroll-spy>Cuenta Regresiva</a>
+               <a href="#section4" data-scroll-spy>Responsive con JavaScript</a>
+               <a href="#section5" data-scroll-spy>Responsive Tester</a>
+               <a href="#section6" data-scroll-spy>Detección de Dispositivos (User Agent)</a>
+               <a href="#section7" data-scroll-spy>Detección de la cámara web</a>
+               <a href="#section8" data-scroll-spy>Geolocalización</a>
+               <a href="#section9" data-scroll-spy>Filtros de Búsquedas</a>
+               <a href="#section10" data-scroll-spy>Sorteo Digital</a>
+               <a href="#section11" data-scroll-spy>Responsive Sliders</a>
+               <a href="#section12" data-scroll-spy>Video Automático</a>
+               <a href="#section13" data-scroll-spy>Validaciones de Formulario</a>
+               <a href="#section14" data-scroll-spy>Narrador</a>
             </nav>
          </div>
       </aside>
 
       <main>
-         <section id="seccion1" class="section" data-scroll-spy>
+         <section id="section1" class="section-container" data-scroll-spy>
             <h2>Reloj Digital y Alarma Sonora</h2>
-            <div id="reloj"></div>
+            <div id="clock"></div>
             <div class="flex-row-center">
-               <div class="reloj__btns">
-                  <button id="activar-reloj">Iniciar Reloj</button>
-                  <button id="desactivar-reloj">Detener Reloj</button>
+               <div class="clock-btns">
+                  <button id="activate-clock">Iniciar Reloj</button>
+                  <button id="deactivate-clock">Detener Reloj</button>
                </div>
-               <div class="reloj__btns">
-                  <button id="activar-alarma">Iniciar Alarma</button>
-                  <button id="desactivar-alarma">Detener Alarma</button>
+               <div class="clock-btns">
+                  <button id="activate-alarm">Iniciar Alarma</button>
+                  <button id="deactivate-alarm">Detener Alarma</button>
                </div>
             </div>
          </section>
 
-         <section id="seccion2" class="section" data-scroll-spy>
+         <section id="section2" class="section-container" data-scroll-spy>
             <h2>Eventos del Teclado</h2>
             <article class="stage">
                <div class="ball"></div>
@@ -81,67 +82,67 @@
             <p>Seleccioná el panel y mové el círculo con las teclas: (↑ → ↓ ←) o (WASD)</p>
          </section>
 
-         <section id="seccion3" class="section" data-scroll-spy>
+         <section id="section3" class="section-container" data-scroll-spy>
             <h2>Cuenta Regresiva</h2>
-            <form id="cuenta-regres" class="form-cuenta">
-               <label for="fecha">Ingresá una fecha (ej: 2024-01-01) </label>
-               <input type="text" name="fecha" class="form-control" placeholder="aaaa-mm-dd" />
-               <button type="submit" class="btn btn-success iniciar-cuenta">Iniciar Cuenta</button>
+            <form  class="countdown-form">
+               <label for="date">Ingresá una fecha (ej: 2024-01-01) </label>
+               <input type="text" name="date" class="form-control" placeholder="aaaa-mm-dd" />
+               <button type="submit" class="btn btn-success">Iniciar Cuenta</button>
             </form>
             <div class="countdown"></div>
-            <div class="text-fecha"></div>
-            <button type="button" class="btn btn-danger borrar-fecha button-inactive">
+            <div class="date-text"></div>
+            <button type="button" class="btn btn-danger delete-date inactive-button">
                Borrar fecha seteada
             </button>
          </section>
 
-         <section id="seccion4" class="section" data-scroll-spy>
+         <section id="section4" class="section-container" data-scroll-spy>
             <h2>Responsive con JavaScript</h2>
             <h3>Museo Castagnino</h3>
             <div id="youtube"></div>
             <div id="gmaps"></div>
          </section>
 
-         <section id="seccion5" class="section" data-scroll-spy>
+         <section id="section5" class="section-container" data-scroll-spy>
             <h2>Responsive Tester</h2>
             <form id="responsive-tester" class="form-responsive-tester">
-               <input name="direccion" type="url" class="form-control" placeholder="URL" data-dark required />
-               <input name="ancho" type="text" class="form-control" placeholder="Ancho" data-dark required />
-               <input name="alto" type="text" class="form-control" placeholder="Alto" data-dark required />
-               <input name="probar" type="submit" class="btn btn-success" value="Probar" />
-               <input name="cerrar" type="button" class="btn btn-danger" value="Cerrar" />
+               <input name="direction" type="url" class="form-control" placeholder="URL" data-dark required />
+               <input name="width" type="text" class="form-control" placeholder="Ancho" data-dark required />
+               <input name="height" type="text" class="form-control" placeholder="Alto" data-dark required />
+               <input name="test" type="submit" class="btn btn-success" value="Probar" />
+               <input name="close" type="button" class="btn btn-danger" value="Cerrar" />
             </form>
             <br />
             <p>Colocá la URL y las medidas (en píxeles) para ver la página en una nueva ventana.</p>
          </section>
 
-         <section id="seccion6" class="section" data-scroll-spy>
+         <section id="section6" class="section-container" data-scroll-spy>
             <h2>Detección de Dispositivos<br />(User Agent)</h2>
             <div id="user-device"></div>
          </section>
 
-         <section id="seccion7" class="section" data-scroll-spy>
+         <section id="section7" class="section-container" data-scroll-spy>
             <h2>Detección de la cámara web</h2>
             <div>
-               <button id="iniciar-webcam" class="btn btn-success">Abrir Cámara</button>
-               <button id="cerrar-webcam" class="btn btn-danger btn-cerrar">Cerrar Cámara</button>
+               <button id="start-webcam" class="btn btn-success">Abrir Cámara</button>
+               <button id="stop-webcam" class="btn btn-danger btn-stop">Cerrar Cámara</button>
             </div>
             <video id="webcam"></video>
          </section>
 
-         <section id="seccion8" class="section" data-scroll-spy>
+         <section id="section8" class="section-container" data-scroll-spy>
             <h2>Geolocalización</h2>
             <button type="button" class="btn btn-success">Obtener ubicación</button>
             <div id="geolocation"></div>
          </section>
 
-         <section id="seccion9" class="section" data-scroll-spy data-scroll-spy>
+         <section id="section9" class="section-container" data-scroll-spy>
             <h2>Filtros de Búsquedas</h2>
             <div class="input-container">
                <i class="fa-solid fa-magnifying-glass"></i>
                <input type="search" placeholder="Buscar..." class="card-filter form-control" data-dark />
             </div>
-            <article class="cards">
+            <article class="cards-container">
                <figure class="card">
                   <img
                      src="https://images.pexels.com/photos/1995730/pexels-photo-1995730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -187,7 +188,7 @@
             </article>
          </section>
 
-         <section id="seccion10" class="section" data-scroll-spy data-scroll-spy>
+         <section id="section10" class="section-container" data-scroll-spy data-scroll-spy>
             <h2>Sorteo Digital</h2>
             <ul class="players">
                <li class="player">JavaScript</li>
@@ -204,7 +205,7 @@
             <button id="winner-btn" class="btn btn-success">Obtener Ganador</button>
          </section>
 
-         <section id="seccion11" class="section" data-scroll-spy>
+         <section id="section11" class="section-container" data-scroll-spy>
             <h2>Responsive Sliders</h2>
             <article class="slider-container">
                <button class="slider-btn btn-prev"><i class="fa-solid fa-arrow-left"></i></button>
@@ -266,7 +267,7 @@
             <br />
          </section>
 
-         <section id="seccion12" class="section" data-scroll-spy>
+         <section id="section12" class="section-container" data-scroll-spy>
             <h2>Video Automático</h2>
             <p>
                El video comienza a reproducirse cuando puede verse en la ventana del navegador, luego queda
@@ -275,7 +276,7 @@
             <video src="./assets/agua-(720p).mp4" muted controls loop data-smart-video></video>
          </section>
 
-         <section id="seccion13" class="section" data-scroll-spy>
+         <section id="section13" class="section-container" data-scroll-spy>
             <h2>Validaciones de Formulario</h2>
             <form id="contact-form" class="contact-form">
                <legend>Envianos tu comentario</legend>
@@ -315,7 +316,7 @@
             </form>
          </section>
 
-         <section id="seccion14" class="section" data-scroll-spy>
+         <section id="section14" class="section-container" data-scroll-spy>
             <h2>Narrador</h2>
             <form class="speaker">
                <select id="speech-select" class="form-select">

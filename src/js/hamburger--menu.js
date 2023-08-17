@@ -1,7 +1,7 @@
 export function hamburgerMenu() {
-   const $panelBtn = document.querySelector('.panel-btn'),
-      $panelAside = document.querySelector('.panel'),
-      $menuLink = document.querySelector('.menu');
+   const $panelBtn = document.querySelector('.panel-btn');
+   const $panelAside = document.querySelector('.panel');
+   const $menuLink = document.querySelector('.menu');
 
    $panelBtn.addEventListener('click', () => {
       $panelAside.classList.toggle('is-active');

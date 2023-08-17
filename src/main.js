@@ -1,32 +1,32 @@
-import { showTopButton, toTop } from './js/boton_scroll.js';
-import { classicSlider } from './js/carrusel_clasico.js';
-import { fadeSlider } from './js/carrusel_desvanecimiento.js';
-import { borrarFecha, cuentaRegresiva, setFecha } from './js/cuenta_regresiva.js';
-import { webCam } from './js/deteccion_camara_web.js';
-import { userDeviceInfo } from './js/deteccion_dispositivos.js';
-import { networkStatus } from './js/deteccion_red.js';
-import { searchFilter } from './js/filtros_busqueda.js';
-import { formValidation } from './js/formulario_contacto.js';
-import { getGeolocation } from './js/geolocalizacion.js';
-import { hamburgerMenu } from './js/menu_hamburguesa.js';
-import { speechReader } from './js/narrador.js';
-import { responsiveMedia } from './js/objeto_responsive.js';
-import { closeResponsiveTester, responsiveTester } from './js/prueba_responsive.js';
-import { alarma, reloj } from './js/reloj.js';
-import { scrollSpy } from './js/scroll_spy.js';
-import { lottery } from './js/sorteo_digital.js';
-import { moveBall, shortcuts } from './js/teclado.js';
-import { darkTheme } from './js/tema_oscuro.js';
-import { smartVideo } from './js/video_automatico.js';
+import { alarm, clock } from './js/alarm-clock.js';
+import { classicSlider } from './js/classic-slider.js';
+import { closeResponsiveTester, responsiveTester } from './js/responsive-tester.js';
+import { darkTheme } from './js/dark-mode.js';
+import { deleteDate, countdown, setDate } from './js/date-countdown.js';
+import { fadeSlider } from './js/fade-slider.js';
+import { formValidation } from './js/contact-form.js';
+import { getGeolocation } from './js/geolocation.js';
+import { hamburgerMenu } from './js/hamburger--menu.js';
+import { lottery } from './js/digital-lottery.js';
+import { moveBall, shortcuts } from './js/keyboard-events.js';
+import { networkStatus } from './js/network-detection.js';
+import { responsiveMedia } from './js/responsive-media.js';
+import { scrollSpy } from './js/scroll-spy.js';
+import { searchFilter } from './js/search-filter.js';
+import { showTopButton, toTop } from './js/scroll_button.js';
+import { smartVideo } from './js/automatic-video.js';
+import { speechReader } from './js/narrator.js';
+import { userDeviceInfo } from './js/device-detection.js';
+import { webCam } from './js/webcam-detection.js';
 
-const $stage = document.querySelector('.stage'),
-   $formTester = document.getElementById('responsive-tester');
+const $stage = document.querySelector('.stage');
+const $formTester = document.getElementById('responsive-tester');
 
 document.addEventListener('DOMContentLoaded', () => {
    hamburgerMenu();
-   reloj();
-   alarma();
-   cuentaRegresiva();
+   clock();
+   alarm();
+   countdown();
    darkTheme();
    responsiveMedia(
       'youtube',
@@ -57,27 +57,27 @@ document.addEventListener('click', (e) => {
    if (e.target === $stage || e.target.matches(`.stage *`)) $stage.classList.toggle('stage-active');
    else $stage.classList.remove('stage-active');
 
-   if (e.target.matches('.borrar-fecha')) borrarFecha();
+   if (e.target.matches('.delete-date')) deleteDate();
 
    if (e.target.matches('.scroll-top-btn')) toTop();
 
-   if (e.target === $formTester.cerrar) closeResponsiveTester();
+   if (e.target === $formTester.close) closeResponsiveTester();
 
-   if (e.target.matches('#iniciar-webcam')) webCam();
+   if (e.target.matches('#start-webcam')) webCam();
 
-   if (e.target.matches('#seccion8 .btn')) getGeolocation();
+   if (e.target.matches('#section8 .btn')) getGeolocation();
 
    if (e.target.matches('#winner-btn')) lottery('.player');
 });
 
 document.addEventListener('submit', (e) => {
-   if (e.target.matches('.form-cuenta')) setFecha(e);
+   if (e.target.matches('.countdown-form')) setDate(e);
 
    if (e.target === $formTester) responsiveTester(e);
 });
 
 document.addEventListener('keyup', (e) => {
-   if (e.target.matches('#seccion9 input')) searchFilter();
+   if (e.target.matches('#section9 input')) searchFilter();
 });
 
 window.addEventListener('scroll', () => {

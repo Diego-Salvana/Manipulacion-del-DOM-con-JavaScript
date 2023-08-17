@@ -1,5 +1,5 @@
-const $elementsListTheme = document.querySelectorAll('[data-dark]'),
-   $themeBtn = document.querySelector('.dark-theme-btn');
+const $elementsListTheme = document.querySelectorAll('[data-dark]');
+const $themeBtn = document.querySelector('.dark-theme-btn');
 
 function darkMode() {
    $elementsListTheme.forEach((element) => element.classList.add('dark-mode'));

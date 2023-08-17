@@ -50,7 +50,7 @@ video {
    text-align: center;
 }
 
-.section {
+.section-container {
    padding: 5rem 2rem 0;
    margin: 0 auto;
    width: 100%;
@@ -59,7 +59,7 @@ video {
    text-align: center;
 }
 
-.section h2 {
+.section-container h2 {
    margin-bottom: 2rem;
 }
 
@@ -135,11 +135,11 @@ video {
 }
 
 /* **********     Reloj     ********** */
-#reloj {
+#clock {
    height: 100px;
 }
 
-.reloj__btns {
+.clock-btns {
    display: inline-block;
    min-width: max-content;
    margin-bottom: 2rem;
@@ -190,7 +190,7 @@ video {
    display: inline-block;
 }
 
-.form-cuenta {
+.countdown-form {
    padding: 10px;
    margin-top: 2rem;
    display: flex;
@@ -200,25 +200,25 @@ video {
 }
 
 @media screen and (min-width: 880px) {
-   .form-cuenta {
+   .countdown-form {
       flex-direction: row;
    }
 }
 
-.form-cuenta button {
+.countdown-form button {
    min-width: max-content;
 }
 
-.form-cuenta input {
+.countdown-form input {
    max-width: 300px;
    min-width: 200px;
 }
 
-.form-cuenta * {
+.countdown-form * {
    margin: 1rem;
 }
 
-.text-fecha p {
+.date-text p {
    font-size: 1.4rem;
 }
 
@@ -230,13 +230,13 @@ video {
    box-shadow: none;
 }
 
-.borrar-fecha {
+.delete-date {
    opacity: 1;
    visibility: visible;
    transition: all 0.4s ease;
 }
 
-.button-inactive {
+.inactive-button {
    opacity: 0;
    visibility: hidden;
 }
@@ -304,7 +304,7 @@ video {
 }
 
 /* **********     Responsible Responsive Design     ********** */
-#seccion4 div {
+#section4 div {
    padding: 10px 0;
    margin: 20px 0;
    border: solid 3px var(--second-color);
@@ -362,11 +362,11 @@ ul img {
 }
 
 /* **********     Webcam     ********** */
-#seccion7 .btn {
+#section7 .btn {
    margin-bottom: 1rem;
 }
 
-.btn-cerrar {
+.btn-stop {
    display: none;
 }
 
@@ -380,7 +380,7 @@ mark {
 
 /* **********     Geolocation     ********** */
 
-#seccion8 .btn {
+#section8 .btn {
    margin-bottom: 1rem;
 }
 
@@ -390,12 +390,12 @@ mark {
    max-width: 400px;
 }
 
-#seccion9 .fa-magnifying-glass {
+#section9 .fa-magnifying-glass {
    font-size: 1.5rem;
    margin-right: 1rem;
 }
 
-#seccion9 .input-container {
+#section9 .input-container {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -405,7 +405,7 @@ mark {
    display: none;
 }
 
-.cards {
+.cards-container {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -433,7 +433,7 @@ mark {
 
 /* **********     Responsive Sliders     ********** */
 
-#seccion11 {
+#section11 {
    padding: 5rem 0 0;
 }
 

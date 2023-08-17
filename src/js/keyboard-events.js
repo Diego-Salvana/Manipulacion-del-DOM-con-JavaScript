@@ -1,11 +1,11 @@
-let x = 0,
-   y = 0;
+let x = 0;
+let y = 0;
 
 export function moveBall(e, ball, stage) {
-   const $ball = document.querySelector(ball),
-      $stage = document.querySelector(stage),
-      limitsBall = $ball.getBoundingClientRect(),
-      limitsStage = $stage.getBoundingClientRect();
+   const $ball = document.querySelector(ball);
+   const $stage = document.querySelector(stage);
+   const limitsBall = $ball.getBoundingClientRect();
+   const limitsStage = $stage.getBoundingClientRect();
 
    switch (e.keyCode) {
       case 37:
@@ -38,5 +38,5 @@ export function moveBall(e, ball, stage) {
 }
 
 export function shortcuts(e) {
-   if (e.key === 'r' && e.altKey) alert('Hello');
+   if (e.key === 'r' && e.altKey) alert('Atajo "Alt + r"');
 }

@@ -1,5 +1,5 @@
 export function scrollSpy() {
-   const $sections = document.querySelectorAll('.section[data-scroll-spy]');
+   const $sections = document.querySelectorAll('.section-container[data-scroll-spy]');
 
    function callback(entries) {
       entries.forEach((entry) => {

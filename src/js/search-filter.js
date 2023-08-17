@@ -1,5 +1,5 @@
-const $input = document.querySelector('#seccion9 input'),
-   $cardsList = document.querySelectorAll('.card');
+const $input = document.querySelector('#section9 input');
+const $cardsList = document.querySelectorAll('.card');
 
 export function searchFilter() {
    $cardsList.forEach((e) => {
